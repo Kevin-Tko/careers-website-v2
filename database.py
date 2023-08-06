@@ -1,7 +1,7 @@
-import sqlalchemy as db
+import sqlalchemy as sql
 from sqlalchemy import text
 
-engine = db.create_engine("mysql+mysqlconnector://b59gm61vzjk5cbkqbgmi:pscale_pw_aSP9NskXdfIOqyYgfQFrkOU6prwg3PUleHkCH4wJJbG@aws.connect.psdb.cloud:3306/careerswebsitev2")
+engine = sql.create_engine("mysql+mysqlconnector://2a92xkjgmvff8hiq6wb9:pscale_pw_OkYBaAiTsZ1bXWEDJ9IXIPuSBctYDzhXbu2zKdL0Sak@aws.connect.psdb.cloud:3306/careerswebsitev2")
 
 def db_job():
   with engine.connect() as conn:
@@ -18,3 +18,4 @@ def db_job():
         'Requirements':items[5]}
       )
     return JOBS
+jobs_listing = db_job()
