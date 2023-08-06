@@ -13,22 +13,29 @@
       width: 100%;
       object-fit: cover;
     }
+    #workers {
+      object-fit: cover;
+      height: 320px;
+    }
   </style>
 </head>
   
 <body>
   {%include 'nav.html'%}
+    <img src='https://careers-website.kevinnjogu.repl.co/static/banner.jpg', alt='Banner', id='banner', class='img-fluid mb-2'>
   <div class='container'>
     
   <h1 class="text-center mt-2 mb-4">TOP BANK JOBS</h1>
-    
-  <img src='https://careers-website.kevinnjogu.repl.co/static/banner.jpg', alt='Banner', id='banner', class='img-fluid'>
-    
-  <h2 class="text-center mt-2 mb-4">About Top Bank Jobs</h2>
-    
-  <p class="lead">
+  <div class='row  mb-2 md'>
+  <div class='col-md-6'>
+      <p class="lead">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </p>
+  </div>
+  <div class='d-none d-md-block col-md-6'>
+      <img src='/static/work.jpg', class='img-fluid img-thumbnail', id='workers', alt='people working'>
+  </div>
+  </div>
     
   <h2 class="text-center mt-2 mb-4">Job Openings</h2>
     
@@ -39,10 +46,10 @@
   </div>
 
   <div class="text-center">
-  <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
-  <p class="lead">copyright 2023, kevin</p>
+  <a href='mailto:kelvnjogu@gmail.com?subject=Query%20About%20Open%20Positions&body=Please%20share%20below%3A%0D%0A1.Your%20name%3A%20%3Center%20your%20name%3E%0D%0A2.Your%20question%3A%20%3Center%20your%20question%3E' type="button" class="btn btn-primary btn-lg">Contact Us</a>
   </div>
     
   </div>
+  {%include 'footer.html'%}
 </body>
 </html>
