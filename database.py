@@ -1,5 +1,5 @@
-import sqlalchemy as sql
-from sqlalchemy import text
+import SQLAlchemy as sql
+from SQLAlchemy import text
 
 engine = sql.create_engine("mysql+mysqlconnector://67fvk2naiow4i2a9ylbf:pscale_pw_bREuGTkd2JTDKWSldHBKNzlgZeUj47YUG1FWn8bDKFk@aws.connect.psdb.cloud:3306/careerswebsitev2")
 
