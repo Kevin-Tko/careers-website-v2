@@ -27,5 +27,3 @@ def db_job():
         'Requirements':items[5]}
       )
     return JOBS
-jobs_listing = db_job()
-# print(jobs_listing)
