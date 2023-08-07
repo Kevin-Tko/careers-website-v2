@@ -3,7 +3,13 @@ from sqlalchemy import text
 
 print(sqlalchemy.__version__)
 
-engine = sqlalchemy.create_engine("mysql+mysqlconnector://98m0kkn8lto6n768z161:pscale_pw_JPu3QhEXzb9GyLwtiAoxtcjtSHQdBv3pjHIhD0b4F7S@aws.connect.psdb.cloud:3306/careerswebsitev2")
+password = 'm15zubn5xoypaw36ov15'
+username = 'pscale_pw_A7KqYUK0cF2pgtHKmt9FCgXdYyQKNrBqPU2erNqQQqy'
+host = 'aws.connect.psdb.cloud'
+db = 'careerswebsitev2'
+port = '3306'
+
+engine = sqlalchemy.create_engine(f"mysql+mysqlconnector://{password}:{username}@{host}:{port}/{db}")
 
 def db_job():
   with engine.connect() as conn:
@@ -21,3 +27,4 @@ def db_job():
       )
     return JOBS
 jobs_listing = db_job()
+# print(jobs_listing)
