@@ -1,14 +1,14 @@
-import os
+# import os
 import sqlalchemy
 from sqlalchemy import create_engine,text
 
-host = os.environ["HOST"]
-user = os.environ["USERNAME"]
-password = os.environ["PASSWORD"]
-dbname = os.environ["DATABASE"]
-print(host)
+# host = os.environ["HOST"]
+# user = os.environ["USERNAME"]
+# password = os.environ["PASSWORD"]
+# dbname = os.environ["DATABASE"]
+# print(host)
 
-connection_str = f'mysql+mysqlconnector://{user}:{password}@{host}:3306/{dbname}'
+connection_str = 'mysql+mysqlconnector://88cwrdv2659ospeog4hh:pscale_pw_l1iaWIuU4rJLQVyc3lnDayAzarBfcE6M4oHMeI0yC96@aws.connect.psdb.cloud:3306/careerswebsitev2?charset=utf8mb4'
 
 engine = create_engine(connection_str, echo=True)
 
@@ -27,3 +27,4 @@ def db_job():
         'Requirements':items[5]}
       )
     return JOBS
+
