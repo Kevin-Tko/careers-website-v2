@@ -87,6 +87,33 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "mysql"
+version = "0.0.3"
+description = "Virtual package for MySQL-python"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+mysqlclient = "*"
+
+[[package]]
+name = "mysql-connector"
+version = "2.2.9"
+description = "MySQL driver written in Python"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "mysqlclient"
+version = "2.2.0"
+description = "Python interface to MySQL"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
 name = "sqlalchemy"
 version = "2.0.19"
 description = "Database Abstraction Library"
@@ -147,7 +174,7 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "8d45009269f3e393fd4f5449a870a3a0052c046ada53921204100fd97ae9f92c"
+content-hash = "c0fd238a508d281b1af6b3ca6cb88b5bdf65f528c06bbc8a11ebd6b3203b64b9"
 
 [metadata.files]
 blinker = []
@@ -158,6 +185,9 @@ greenlet = []
 itsdangerous = []
 jinja2 = []
 markupsafe = []
+mysql = []
+mysql-connector = []
+mysqlclient = []
 sqlalchemy = []
 typing-extensions = []
 werkzeug = []

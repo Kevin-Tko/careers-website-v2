@@ -1,5 +1,7 @@
 import sqlalchemy
 from sqlalchemy import text
+import mysql
+import mysql.connector
 
 print(sqlalchemy.__version__)
 

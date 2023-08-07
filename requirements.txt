@@ -1,4 +1,5 @@
 Flask
 sqlalchemy
 mysql
+mysql-connector
 gunicorn
