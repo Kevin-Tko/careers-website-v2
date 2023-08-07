@@ -1,5 +1,6 @@
 # import os
 import sqlalchemy
+import mysql
 from sqlalchemy import create_engine,text
 
 # host = os.environ["HOST"]
@@ -8,7 +9,7 @@ from sqlalchemy import create_engine,text
 # dbname = os.environ["DATABASE"]
 # print(host)
 
-connection_str = 'mysql+mysqlconnector://88cwrdv2659ospeog4hh:pscale_pw_l1iaWIuU4rJLQVyc3lnDayAzarBfcE6M4oHMeI0yC96@aws.connect.psdb.cloud:3306/careerswebsitev2?charset=utf8mb4'
+connection_str = 'mysql+mysqlconnector://88cwrdv2659ospeog4hh:pscale_pw_l1iaWIuU4rJLQVyc3lnDayAzarBfcE6M4oHMeI0yC96@aws.connect.psdb.cloud/careerswebsitev2?charset=utf8mb4'
 
 engine = create_engine(connection_str, echo=True)
 
