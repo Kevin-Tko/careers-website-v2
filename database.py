@@ -6,7 +6,7 @@ host = os.environ["HOST"]
 user = os.environ["USERNAME"]
 password = os.environ["PASSWORD"]
 dbname = os.environ["DATABASE"]
-print(dbname)
+print(host)
 
 connection_str = f'mysql+mysqlconnector://{user}:{password}@{host}:3306/{dbname}'
 
