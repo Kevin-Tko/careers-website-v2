@@ -45,6 +45,18 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "flask-mysqldb"
+version = "1.0.1"
+description = "MySQLdb extension for Flask"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+Flask = ">=0.12.4"
+mysqlclient = ">=1.3.7"
+
+[[package]]
 name = "greenlet"
 version = "2.0.2"
 description = "Lightweight in-process concurrent programming"
@@ -85,17 +97,6 @@ description = "Safely add untrusted strings to HTML/XML markup."
 category = "main"
 optional = false
 python-versions = ">=3.7"
-
-[[package]]
-name = "mysql"
-version = "0.0.3"
-description = "Virtual package for MySQL-python"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-mysqlclient = "*"
 
 [[package]]
 name = "mysql-connector"
@@ -174,18 +175,18 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "c0fd238a508d281b1af6b3ca6cb88b5bdf65f528c06bbc8a11ebd6b3203b64b9"
+content-hash = "375ce0552309a6c5132cca2f2edf15431d5aa61d2c4a6dfb2d25f044179e6b83"
 
 [metadata.files]
 blinker = []
 click = []
 colorama = []
 flask = []
+flask-mysqldb = []
 greenlet = []
 itsdangerous = []
 jinja2 = []
 markupsafe = []
-mysql = []
 mysql-connector = []
 mysqlclient = []
 sqlalchemy = []

@@ -1,20 +1,37 @@
 import sqlalchemy
 from sqlalchemy import text
-import mysql
+# import mysql
+# import mysql.connector
+
+# print(sqlalchemy.__version__)
+
+# password = 'cmjxuql4b3fmquhbrutu'
+# username = 'pscale_pw_86wZ3knbXCLNBnTXX7UQrfBgOowmfesN8MyQRkhmMST'
+# host = 'aws.connect.psdb.cloud'
+# db = 'careerswebsitev2'
+# port = '3306'
+# PORT = '3306'
+
+# engine = sqlalchemy.create_engine(f"mysql+mysqlconnector://{PASSWORD}:{USERNAME}@{HOST}:{PORT}/{DB}")
+
+
+import os
+from mysql.connector import Error
 import mysql.connector
 
-print(sqlalchemy.__version__)
+connection = mysql.connector.connect(
+HOST = os.environ['HOST'],
+PASSWORD = os.environ['PASSWORD'],
+USERNAME = os.environ['USERNAME'],
+DB = os.environ['DATABASE'],
+ssl_ca= {
+    "ca": "/etc/ssl/cert.pem"
+  }
+)
 
-password = 'cmjxuql4b3fmquhbrutu'
-username = 'pscale_pw_86wZ3knbXCLNBnTXX7UQrfBgOowmfesN8MyQRkhmMST'
-host = 'aws.connect.psdb.cloud'
-db = 'careerswebsitev2'
-port = '3306'
-
-engine = sqlalchemy.create_engine(f"mysql+mysqlconnector://{password}:{username}@{host}:{port}/{db}")
 
 def db_job():
-  with engine.connect() as conn:
+  with connection.connect() as conn:
     result = conn.execute(text('select * from jobs'))
     JOBS=[]
     all_jobs = result.all()
@@ -29,4 +46,4 @@ def db_job():
       )
     return JOBS
 jobs_listing = db_job()
-# print(jobs_listing)
+print(jobs_listing)
