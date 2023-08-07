@@ -5,8 +5,8 @@ import mysql.connector
 
 print(sqlalchemy.__version__)
 
-password = 'rzpulzzomnbs62xg6s5z'
-username = 'pscale_pw_fA3A5PNnX0EXP0TE5m9YNNFaahises2pcTkPtUEhyBZ'
+password = 'cmjxuql4b3fmquhbrutu'
+username = 'pscale_pw_86wZ3knbXCLNBnTXX7UQrfBgOowmfesN8MyQRkhmMST'
 host = 'aws.connect.psdb.cloud'
 db = 'careerswebsitev2'
 port = '3306'
