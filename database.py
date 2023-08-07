@@ -3,8 +3,8 @@ from sqlalchemy import text
 
 print(sqlalchemy.__version__)
 
-password = 'm15zubn5xoypaw36ov15'
-username = 'pscale_pw_A7KqYUK0cF2pgtHKmt9FCgXdYyQKNrBqPU2erNqQQqy'
+password = 'rzpulzzomnbs62xg6s5z'
+username = 'pscale_pw_fA3A5PNnX0EXP0TE5m9YNNFaahises2pcTkPtUEhyBZ'
 host = 'aws.connect.psdb.cloud'
 db = 'careerswebsitev2'
 port = '3306'
