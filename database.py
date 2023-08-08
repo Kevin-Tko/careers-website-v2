@@ -2,7 +2,7 @@ import os
 import sqlalchemy
 from sqlalchemy import create_engine,text
 
-connection_str = os.environ['dbconn']
+connection_str = os.environ["DB_CONNECTION_STR"]
 
 engine = create_engine(
     connection_str,
