@@ -8,7 +8,7 @@ from sqlalchemy import create_engine,text
 # dbname = os.environ["DATABASE"]
 # print(host)
 
-connection_str = 'mysql+pymysql://842rbkaqyaeqe1lugffl:pscale_pw_6zzAddnIM5VIS3fL9JHexAzYMgu349JWy7UnvFpo06J@aws.connect.psdb.cloud:3306/careerswebsitev2?charset=utf8mb4'
+connection_str = 'mysql+pymysql://lasxm8iuden0n5r1rnpx:pscale_pw_49aH18Xv0PSxbhKrUdyxqnF5ey7zhxMmVX6KuZ7btTv@aws.connect.psdb.cloud:3306/careerswebsitev2?charset=utf8mb4'
 
 # ssl_args = {
 #   'ssl_ca':"/etc/ssl/cert.pem"
