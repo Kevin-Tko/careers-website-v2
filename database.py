@@ -1,18 +1,9 @@
-# import os
+import os
 import sqlalchemy
 from sqlalchemy import create_engine,text
 
-# host = os.environ["HOST"]
-# user = os.environ["USERNAME"]
-# password = os.environ["PASSWORD"]
-# dbname = os.environ["DATABASE"]
-# print(host)
+connection_str = os.environ['dbconn']
 
-connection_str = 'mysql+pymysql://lasxm8iuden0n5r1rnpx:pscale_pw_49aH18Xv0PSxbhKrUdyxqnF5ey7zhxMmVX6KuZ7btTv@aws.connect.psdb.cloud:3306/careerswebsitev2?charset=utf8mb4'
-
-# ssl_args = {
-#   'ssl_ca':"/etc/ssl/cert.pem"
-# }
 engine = create_engine(
     connection_str,
     connect_args={
@@ -21,8 +12,6 @@ engine = create_engine(
         }
     }
 )
-
-# engine = create_engine(connection_str, connect_args=ssl_args)
 
 JOBS=[]
 def db_job():
