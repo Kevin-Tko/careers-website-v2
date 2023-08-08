@@ -8,9 +8,21 @@ from sqlalchemy import create_engine,text
 # dbname = os.environ["DATABASE"]
 # print(host)
 
-connection_str = 'mysql+pymysql://88cwrdv2659ospeog4hh:pscale_pw_l1iaWIuU4rJLQVyc3lnDayAzarBfcE6M4oHMeI0yC96@aws.connect.psdb.cloud/careerswebsitev2?charset=utf8mb4'
+connection_str = 'mysql+pymysql://m15eqscipp4jyb9teg98:pscale_pw_Nosb0J541Ykj3dfDZEwjq5PRd8szRPq7Y69cM1y38QZ@aws.connect.psdb.cloud/careerswebsitev2?charset=utf8mb4'
 
-engine = create_engine(connection_str, echo=True)
+# ssl_args = {
+#   'ssl_ca':"/etc/ssl/cert.pem"
+# }
+engine = create_engine(
+    connection_str,
+    connect_args={
+        "ssl": {
+            "ca": "/etc/ssl/certs/ca-certificates.crt"
+        }
+    }
+)
+
+# engine = create_engine(connection_str, connect_args=ssl_args)
 
 JOBS=[]
 def db_job():

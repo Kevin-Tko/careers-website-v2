@@ -87,31 +87,12 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
-name = "mysql"
-version = "0.0.3"
-description = "Virtual package for MySQL-python"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-mysqlclient = "*"
-
-[[package]]
 name = "mysql-connector"
 version = "2.2.9"
 description = "MySQL driver written in Python"
 category = "main"
 optional = false
 python-versions = "*"
-
-[[package]]
-name = "mysqlclient"
-version = "2.2.0"
-description = "Python interface to MySQL"
-category = "main"
-optional = false
-python-versions = ">=3.8"
 
 [[package]]
 name = "sqlalchemy"
@@ -150,6 +131,14 @@ pymysql = ["pymysql"]
 sqlcipher = ["sqlcipher3-binary"]
 
 [[package]]
+name = "ssl"
+version = "1.16"
+description = "SSL wrapper for socket objects (2.3, 2.4, 2.5 compatible)"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "typing-extensions"
 version = "4.7.1"
 description = "Backported and Experimental Type Hints for Python 3.7+"
@@ -174,7 +163,7 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "c0fd238a508d281b1af6b3ca6cb88b5bdf65f528c06bbc8a11ebd6b3203b64b9"
+content-hash = "cfaf136df244b81c68f74d9df69af18e82010c29370b099441cdc0c2325c96b6"
 
 [metadata.files]
 blinker = []
@@ -185,9 +174,8 @@ greenlet = []
 itsdangerous = []
 jinja2 = []
 markupsafe = []
-mysql = []
 mysql-connector = []
-mysqlclient = []
 sqlalchemy = []
+ssl = []
 typing-extensions = []
 werkzeug = []
