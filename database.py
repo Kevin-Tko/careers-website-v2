@@ -13,12 +13,24 @@ engine = create_engine(
     }
 )
 JOBS={}
+id = ''
+title = ''
+company = ''
+location = ''
+responsibility = ''
+requirement = ''
 def db_job():
   with engine.connect() as conn:
     result = conn.execute(text('select * from jobs'))
     all_jobs = result.all()
     
     for items in all_jobs:
-      JOBS={'id': items[0],'Title': items[1],'Company': items[2],'Location': items[3],'Responsibilities': items[4],'Requirements':items[5]}
-    return JOBS
+      id = items[0]
+      title = items[1]
+      company = items[2]
+      location = items[3]
+      responsibility = items[4]
+      requirement = items[5]
+  JOBS={'id': id,'Title': title,'Company': company,'Location': location,'Responsibilities': responsibility,'Requirements':requirement}
+  return JOBS
 
