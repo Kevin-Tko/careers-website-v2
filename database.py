@@ -12,7 +12,7 @@ engine = create_engine(
         }
     }
 )
-
+JOBS={}
 def db_job():
   with engine.connect() as conn:
     result = conn.execute(text('select * from jobs'))
