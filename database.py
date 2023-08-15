@@ -23,14 +23,15 @@ def db_job():
   with engine.connect() as conn:
     result = conn.execute(text('select * from jobs'))
     all_jobs = result.all()
-    
-    for items in all_jobs:
-      id = items[0]
-      title = items[1]
-      company = items[2]
-      location = items[3]
-      responsibility = items[4]
-      requirement = items[5]
-  JOBS={'id': id,'Title': title,'Company': company,'Location': location,'Responsibilities': responsibility,'Requirements':requirement}
-  return JOBS
+    return all_jobs
+
+  #   for items in all_jobs:
+  #     id = items[0]
+  #     title = items[1]
+  #     company = items[2]
+  #     location = items[3]
+  #     responsibility = items[4]
+  #     requirement = items[5]
+  # JOBS={'id': id,'Title': title,'Company': company,'Location': location,'Responsibilities': responsibility,'Requirements':requirement}
+  # return JOBS
 
