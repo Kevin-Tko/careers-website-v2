@@ -22,13 +22,3 @@ def db_job():
       JOBS={'id': items[0],'Title': items[1],'Company': items[2],'Location': items[3],'Responsibilities': items[4],'Requirements':items[5]}
     return JOBS
 
-      # JOBS.append({
-      #   'id': items[0],
-      #   'Title': items[1], 
-      #   'Company': items[2],
-      #   'Location': items[3],
-      #   'Responsibilities': items[4],
-      #   'Requirements':items[5]}
-      # )
-    # return JOBS
-
