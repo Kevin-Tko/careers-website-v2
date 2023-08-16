@@ -2,8 +2,6 @@ from database import db_job
 from flask import Flask, render_template, jsonify
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
-jobs_ls = db_job()
-print(jobs_ls)
 @app.route("/")
 def hello_word():
   jobs_ls = db_job()
